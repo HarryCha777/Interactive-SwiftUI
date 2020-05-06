@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CoreDataEntity" representedClassName="CoreDataEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="firstLaunchDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="requestedReview" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+    </entity>
+    <elements>
+        <element name="CoreDataEntity" positionX="-94.2109375" positionY="-97.8203125" width="123.31640625" height="73"/>
+    </elements>
+</model>
