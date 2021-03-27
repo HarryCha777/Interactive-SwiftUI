@@ -10,21 +10,24 @@ import SwiftUI
 
 struct Picker2View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var selectedIndex = 0 // makes variable selectedIndex as 0
     var colors = ["Red", "Blue", "Green"] // makes variable colors list as "Red", "Blue", and "Green"
 
     var body: some View {
         Group {
-            Text("What is your favorite color?") // displays text
-            
-            Picker("Colors Label", selection: $selectedIndex) { // displays picker setting selectedIndex
-                ForEach(0 ..< colors.count) { index in // loops through colors list
-                    Text(self.colors[index]) // displays text for each color
+            if isReady {
+                Text("What is your favorite color?") // displays text
+                
+                Picker("Colors Label", selection: $selectedIndex) { // displays picker setting selectedIndex
+                    ForEach(0 ..< colors.count) { index in // loops through colors list
+                        Text(self.colors[index]) // displays text for each color
+                    }
                 }
+                .pickerStyle(SegmentedPickerStyle()) // sets style to segmented and automatically hides label
+                
+                Text("Your favorite color is \(colors[selectedIndex]).") // displays text with favorite color
             }
-            .pickerStyle(SegmentedPickerStyle()) // sets style to segmented and automatically hides label
-            
-            Text("Your favorite color is \(colors[selectedIndex]).") // displays text with favorite color
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -32,6 +35,9 @@ struct Picker2View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

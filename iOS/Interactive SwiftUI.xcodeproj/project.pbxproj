@@ -14,6 +14,12 @@
 		8F19F4512437C71700BE44A5 /* Clickable3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F19F4502437C71700BE44A5 /* Clickable3View.swift */; };
 		8F19F4532437C71C00BE44A5 /* Clickable4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F19F4522437C71C00BE44A5 /* Clickable4View.swift */; };
 		8F19F4552437C72100BE44A5 /* Clickable5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F19F4542437C72100BE44A5 /* Clickable5View.swift */; };
+		8F23B47B2499DC1100678B80 /* MenuMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23B47A2499DC1100678B80 /* MenuMenuView.swift */; };
+		8F23B47D2499DC2300678B80 /* Menu1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23B47C2499DC2300678B80 /* Menu1View.swift */; };
+		8F23B47F2499DC2B00678B80 /* Menu2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23B47E2499DC2B00678B80 /* Menu2View.swift */; };
+		8F23B4822499E0B200678B80 /* ContainerMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23B4812499E0B200678B80 /* ContainerMenuView.swift */; };
+		8F23B4842499E0BD00678B80 /* Container1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23B4832499E0BD00678B80 /* Container1View.swift */; };
+		8F23B4862499E0C700678B80 /* Container2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F23B4852499E0C700678B80 /* Container2View.swift */; };
 		8F4625732436FC1900512675 /* Text2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4625722436FC1900512675 /* Text2View.swift */; };
 		8F4625772436FDC500512675 /* Text3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4625762436FDC500512675 /* Text3View.swift */; };
 		8F46257D2437039000512675 /* Text4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F46257C2437039000512675 /* Text4View.swift */; };
@@ -68,6 +74,7 @@
 		8F8D384A24367333009F1743 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D384924367333009F1743 /* SettingsView.swift */; };
 		8F8D384C243679DD009F1743 /* TextMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D384B243679DD009F1743 /* TextMenuView.swift */; };
 		8F8D384E243680D9009F1743 /* Text1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F8D384D243680D9009F1743 /* Text1View.swift */; };
+		8FACCEBF249FD797008EA096 /* Container3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FACCEBE249FD797008EA096 /* Container3View.swift */; };
 		8FCA60A924384BCC000A8322 /* AdjustmentMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA60A824384BCC000A8322 /* AdjustmentMenuView.swift */; };
 		8FCA60AB24384BD7000A8322 /* Adjustment1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA60AA24384BD7000A8322 /* Adjustment1View.swift */; };
 		8FCA60AD24384BDB000A8322 /* Adjustment2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA60AC24384BDB000A8322 /* Adjustment2View.swift */; };
@@ -99,6 +106,12 @@
 		8F19F4502437C71700BE44A5 /* Clickable3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clickable3View.swift; sourceTree = "<group>"; };
 		8F19F4522437C71C00BE44A5 /* Clickable4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clickable4View.swift; sourceTree = "<group>"; };
 		8F19F4542437C72100BE44A5 /* Clickable5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clickable5View.swift; sourceTree = "<group>"; };
+		8F23B47A2499DC1100678B80 /* MenuMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuMenuView.swift; sourceTree = "<group>"; };
+		8F23B47C2499DC2300678B80 /* Menu1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu1View.swift; sourceTree = "<group>"; };
+		8F23B47E2499DC2B00678B80 /* Menu2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu2View.swift; sourceTree = "<group>"; };
+		8F23B4812499E0B200678B80 /* ContainerMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerMenuView.swift; sourceTree = "<group>"; };
+		8F23B4832499E0BD00678B80 /* Container1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container1View.swift; sourceTree = "<group>"; };
+		8F23B4852499E0C700678B80 /* Container2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container2View.swift; sourceTree = "<group>"; };
 		8F4625722436FC1900512675 /* Text2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text2View.swift; sourceTree = "<group>"; };
 		8F4625762436FDC500512675 /* Text3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text3View.swift; sourceTree = "<group>"; };
 		8F46257C2437039000512675 /* Text4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text4View.swift; sourceTree = "<group>"; };
@@ -159,10 +172,12 @@
 		8F8D384924367333009F1743 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8F8D384B243679DD009F1743 /* TextMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMenuView.swift; sourceTree = "<group>"; };
 		8F8D384D243680D9009F1743 /* Text1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text1View.swift; sourceTree = "<group>"; };
+		8FACCEBE249FD797008EA096 /* Container3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container3View.swift; sourceTree = "<group>"; };
 		8FCA60A824384BCC000A8322 /* AdjustmentMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentMenuView.swift; sourceTree = "<group>"; };
 		8FCA60AA24384BD7000A8322 /* Adjustment1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjustment1View.swift; sourceTree = "<group>"; };
 		8FCA60AC24384BDB000A8322 /* Adjustment2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjustment2View.swift; sourceTree = "<group>"; };
 		8FCA60AE24384CBF000A8322 /* Adjustment3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjustment3View.swift; sourceTree = "<group>"; };
+		8FF810F024DD0D04000EA335 /* Interactive SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Interactive SwiftUI.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +216,27 @@
 				8F19F4542437C72100BE44A5 /* Clickable5View.swift */,
 			);
 			path = Clickable;
+			sourceTree = "<group>";
+		};
+		8F23B4792499DBC100678B80 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				8F23B47A2499DC1100678B80 /* MenuMenuView.swift */,
+				8F23B47C2499DC2300678B80 /* Menu1View.swift */,
+				8F23B47E2499DC2B00678B80 /* Menu2View.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		8F23B4802499E09B00678B80 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				8F23B4812499E0B200678B80 /* ContainerMenuView.swift */,
+				8F23B4832499E0BD00678B80 /* Container1View.swift */,
+				8F23B4852499E0C700678B80 /* Container2View.swift */,
+				8FACCEBE249FD797008EA096 /* Container3View.swift */,
+			);
+			path = Container;
 			sourceTree = "<group>";
 		};
 		8F46259024370F8B00512675 /* Text */ = {
@@ -324,6 +360,7 @@
 		8F8D381324367180009F1743 /* Interactive SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				8FF810F024DD0D04000EA335 /* Interactive SwiftUI.entitlements */,
 				8F8D381424367180009F1743 /* AppDelegate.swift */,
 				8F8D381624367180009F1743 /* SceneDelegate.swift */,
 				8F4D5B7624606EEC00CDC942 /* CoreData.swift */,
@@ -335,6 +372,8 @@
 				8F46259224370FAC00512675 /* Image */,
 				8F462595243710AE00512675 /* Stack */,
 				8F4625A224371D2800512675 /* Spacer */,
+				8F23B4802499E09B00678B80 /* Container */,
+				8F23B4792499DBC100678B80 /* Menu */,
 				8F19F4472437C67E00BE44A5 /* Clickable */,
 				8FCA60A724384BB3000A8322 /* Adjustment */,
 				8F739C19243AC54000268741 /* Picker */,
@@ -529,6 +568,7 @@
 				8F739C45243B93DD00268741 /* LocalNotification1View.swift in Sources */,
 				8F739C49243B93EE00268741 /* LocalNotification2View.swift in Sources */,
 				8F739C2C243ADBE500268741 /* TextInputMenuView.swift in Sources */,
+				8F23B47B2499DC1100678B80 /* MenuMenuView.swift in Sources */,
 				8F739C1D243AC5D900268741 /* Picker1View.swift in Sources */,
 				8F8D381A24367180009F1743 /* Interactive_SwiftUI.xcdatamodeld in Sources */,
 				8FCA60A924384BCC000A8322 /* AdjustmentMenuView.swift in Sources */,
@@ -536,10 +576,12 @@
 				8F4625A424371D3800512675 /* SpacerMenuView.swift in Sources */,
 				8F19F4512437C71700BE44A5 /* Clickable3View.swift in Sources */,
 				8F462597243710DC00512675 /* Stack1View.swift in Sources */,
+				8F23B4862499E0C700678B80 /* Container2View.swift in Sources */,
 				8F19F4552437C72100BE44A5 /* Clickable5View.swift in Sources */,
 				8FCA60AF24384CBF000A8322 /* Adjustment3View.swift in Sources */,
 				8F739C30243ADBF300268741 /* TextInput2View.swift in Sources */,
 				8F739C1B243AC54E00268741 /* PickerMenuView.swift in Sources */,
+				8F23B47F2499DC2B00678B80 /* Menu2View.swift in Sources */,
 				8F4625B4243722EF00512675 /* Spacer4View.swift in Sources */,
 				8F739C47243B93E500268741 /* LocalNotificationMenuView.swift in Sources */,
 				8F46257D2437039000512675 /* Text4View.swift in Sources */,
@@ -547,7 +589,9 @@
 				8FCA60AD24384BDB000A8322 /* Adjustment2View.swift in Sources */,
 				8F739C27243AD43400268741 /* Picker6View.swift in Sources */,
 				8F4625732436FC1900512675 /* Text2View.swift in Sources */,
+				8F23B4842499E0BD00678B80 /* Container1View.swift in Sources */,
 				8F739C40243AE0A500268741 /* Alert3View.swift in Sources */,
+				8FACCEBF249FD797008EA096 /* Container3View.swift in Sources */,
 				8F4625892437082300512675 /* Image3View.swift in Sources */,
 				8F4D5B7724606EEC00CDC942 /* CoreData.swift in Sources */,
 				8F4D5B7B2460BDC100CDC942 /* AboutView.swift in Sources */,
@@ -562,9 +606,11 @@
 				8F739C23243AC5EF00268741 /* Picker4View.swift in Sources */,
 				8F4625A624371D4300512675 /* Spacer1View.swift in Sources */,
 				8F739C4B243B93F400268741 /* LocalNotification3View.swift in Sources */,
+				8F23B47D2499DC2300678B80 /* Menu1View.swift in Sources */,
 				8F739C34243ADC1100268741 /* TextInput3View.swift in Sources */,
 				8F8D381C24367180009F1743 /* ContentView.swift in Sources */,
 				8F19F44F2437C70800BE44A5 /* Clickable2View.swift in Sources */,
+				8F23B4822499E0B200678B80 /* ContainerMenuView.swift in Sources */,
 				8F19F44D2437C6DF00BE44A5 /* CodeView.swift in Sources */,
 				8F8D384A24367333009F1743 /* SettingsView.swift in Sources */,
 				8F19F4532437C71C00BE44A5 /* Clickable4View.swift in Sources */,
@@ -742,7 +788,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Interactive SwiftUI/Interactive SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Interactive SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 9P4X6V9RQ5;
 				ENABLE_PREVIEWS = YES;
@@ -751,8 +799,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harrycha.Interactive-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -762,7 +812,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Interactive SwiftUI/Interactive SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Interactive SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 9P4X6V9RQ5;
 				ENABLE_PREVIEWS = YES;
@@ -771,8 +823,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.harrycha.Interactive-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -10,14 +10,17 @@ import SwiftUI
 
 struct Picker5View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var birthDate = Date() // makes variable birthDate as current date and time
     
     var body: some View {
         Group {
-            Text("When is your birthday?") // displays text
-            
-            DatePicker("Date Label", selection: $birthDate, in: ...Date(), displayedComponents: .date) // displays date picker setting birthDate
-                .labelsHidden() // hides label "Date Label" because it's useless
+            if isReady {
+                Text("When is your birthday?") // displays text
+                
+                DatePicker("Date Label", selection: $birthDate, in: ...Date(), displayedComponents: .date) // displays date picker setting birthDate
+                    .labelsHidden() // hides label "Date Label" because it's useless
+            }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -25,6 +28,9 @@ struct Picker5View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

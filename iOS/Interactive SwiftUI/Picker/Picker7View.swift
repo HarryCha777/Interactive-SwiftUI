@@ -10,14 +10,17 @@ import SwiftUI
 
 struct Picker7View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var installDate = Date() // makes variable installDate as current date and time
     
     var body: some View {
         Group {
-            Form { // contains views in form
-                Text("When did you install this app?") // displays text
+            if isReady {
+                Form { // contains views in form
+                    Text("When did you install this app?") // displays text
                 
-                DatePicker("Install Date and Time:", selection: $installDate) // displays date picker setting installDate and doesn't hide label because it's actually useful in this case
+                    DatePicker("Install Date and Time:", selection: $installDate) // displays date picker setting installDate and doesn't hide label because it's actually useful in this case
+                }
             }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
@@ -26,6 +29,9 @@ struct Picker7View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

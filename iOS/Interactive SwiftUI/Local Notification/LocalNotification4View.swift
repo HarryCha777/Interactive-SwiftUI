@@ -11,25 +11,28 @@ import UserNotifications // import user notification
 
 struct LocalNotification4View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var notificationDate = Date() // makes variable notificationDate as current date and time
     
     var body: some View {
         Group {
-            VStack {
-                Text("When would you like the notification to ring?") // displays text
+            if isReady {
+                VStack {
+                    Text("When would you like the notification to ring?") // displays text
                 
-                DatePicker("Date Label", selection: $notificationDate) // displays date picker setting notificationDate
-                    .labelsHidden() // hides label "Date Label" because it's useless
+                    DatePicker("Date Label", selection: $notificationDate) // displays date picker setting notificationDate
+                        .labelsHidden() // hides label "Date Label" because it's useless
 
-                Button(action: { // if clicked
-                    self.schedule() // calls function named schedule
-                }) {
-                    Text("Click me to schedule a notification on the specified time!") // displays text
+                    Button(action: { // if clicked
+                        self.schedule() // calls function named schedule
+                    }) {
+                        Text("Click me to schedule a notification on the specified time!") // displays text
+                            .padding() // puts padding around text to ensure it doesn't touch the sides of screen
+                    }
+                
+                    Text("After clicking on the button, please turn off the device's screen for local notification to work properly.") // displays text
                         .padding() // puts padding around text to ensure it doesn't touch the sides of screen
                 }
-                
-                Text("After clicking on the button, please turn off the device's screen for local notification to work properly.") // displays text
-                    .padding() // puts padding around text to ensure it doesn't touch the sides of screen
             }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
@@ -38,6 +41,9 @@ struct LocalNotification4View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
     
     func schedule() { // function that asks for notification permission and schedules notification

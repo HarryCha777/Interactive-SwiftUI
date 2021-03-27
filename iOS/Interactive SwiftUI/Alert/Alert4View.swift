@@ -10,20 +10,23 @@ import SwiftUI
 
 struct Alert4View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var showAlert = false // makes variable showAlert as false
     
     var body: some View {
         Group {
-            Button(action: { // if clicked
-                self.showAlert = true // sets showAlert to true
-            }) {
-                Text("How do you like this app?") // displays text
+            if isReady {
+                Button(action: { // if clicked
+                    self.showAlert = true // sets showAlert to true
+                }) {
+                    Text("How do you like this app?") // displays text
+                }
+                .alert(isPresented: $showAlert) { // if showAlert is true
+                    Alert(title: Text("You've come so far, I'm proud of you!"), message: Text("If you learned some SwiftUI from this app, would you mind rating this app on App Store?"), primaryButton: .default(Text("Sure, take me there!"), action: { // shows alert and if clicked
+                        self.linkToReview() // calls function named linkToReview
+                    }), secondaryButton: .destructive(Text("Not really, take me back."))) // makes secondary destructive button
+                } // automatically sets showAlert to false after alert is finished
             }
-            .alert(isPresented: $showAlert) { // if showAlert is true
-                Alert(title: Text("You've come so far, I'm proud of you!"), message: Text("If you learned some SwiftUI from this app, would you mind rating this app on App Store?"), primaryButton: .default(Text("Sure, take me there!"), action: { // shows alert and if clicked
-                    self.linkToReview() // calls function named linkToReview
-                }), secondaryButton: .destructive(Text("Not really, take me back."))) // makes secondary destructive button
-            } // automatically sets showAlert to false after alert is finished
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -31,10 +34,13 @@ struct Alert4View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
     
     func linkToReview() { // function that links to app review
-        guard let productURL = URL(string: "https://apps.apple.com/app/id1505570242") else { return } // sets url
+        guard let productURL = URL(string: "https://apps.apple.com/app/id1511793071") else { return } // sets url
         
         var components = URLComponents(url: productURL, resolvingAgainstBaseURL: false) // makes variable components as URLComponents of productURL
         components?.queryItems = [

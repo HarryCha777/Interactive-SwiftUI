@@ -10,18 +10,21 @@ import SwiftUI
 
 struct Clickable1View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var showText = false // makes variable showText as false
 
     var body: some View {
         Group {
-            VStack { // groups views vertically
-                Text("Tap me to show text below.") // displays text
-                    .onTapGesture { // if tapped
-                        self.showText = true // sets showText to true
-                    }
+            if isReady {
+                VStack { // groups views vertically
+                    Text("Tap me to show text below.") // displays text
+                        .onTapGesture { // if tapped
+                            self.showText = true // sets showText to true
+                        }
                 
-                if showText { // if showText is true
-                    Text("The text above is tapped!") // displays text right under text above
+                    if showText { // if showText is true
+                        Text("The text above is tapped!") // displays text right under text above
+                    }
                 }
             }
         }
@@ -31,6 +34,9 @@ struct Clickable1View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

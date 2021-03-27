@@ -10,14 +10,17 @@ import SwiftUI
 
 struct Picker6View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var wakeUpTime = Date() // makes variable wakeUpTime as current date and time
     
     var body: some View {
         Group {
-            Text("When did you wake up today?") // displays text
-            
-            DatePicker("Date Label", selection: $wakeUpTime, in: ...Date(), displayedComponents: .hourAndMinute) // displays date picker setting wakeUpTime
-                .labelsHidden() // hides label "Date Label" because it's useless
+            if isReady {
+                Text("When did you wake up today?") // displays text
+                
+                DatePicker("Date Label", selection: $wakeUpTime, in: ...Date(), displayedComponents: .hourAndMinute) // displays date picker setting wakeUpTime
+                    .labelsHidden() // hides label "Date Label" because it's useless
+            }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -25,6 +28,9 @@ struct Picker6View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

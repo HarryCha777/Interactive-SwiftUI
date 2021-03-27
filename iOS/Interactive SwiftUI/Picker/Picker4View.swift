@@ -10,17 +10,20 @@ import SwiftUI
 
 struct Picker4View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var installDate = Date() // makes variable installDate as current date and time
 
     var body: some View {
         Group {
-            Text("When did you install this app?") // displays text
+            if isReady {
+                Text("When did you install this app?") // displays text
 
-            DatePicker("Date Label", selection: $installDate) // displays date picker setting installDate
-                .labelsHidden() // hides label "Date Label" because it's useless
-            
-            Text("You installed this app around \(installDate).\n") // displays text with install date
-                .fixedSize(horizontal: false, vertical: true) // prevents this long text from collapsing vertically
+                DatePicker("Date Label", selection: $installDate) // displays date picker setting installDate
+                    .labelsHidden() // hides label "Date Label" because it's useless
+                
+                Text("You installed this app around \(installDate).\n") // displays text with install date
+                    .fixedSize(horizontal: false, vertical: true) // prevents this long text from collapsing vertically
+            }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -28,6 +31,9 @@ struct Picker4View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

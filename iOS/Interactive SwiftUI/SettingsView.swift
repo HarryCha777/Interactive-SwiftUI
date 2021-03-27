@@ -9,23 +9,30 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @State private var isDarkMode = true
     @State private var appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
-
+    
     var body: some View {
         Form {
             Section(header: Text("Dev")) {
                 NavigationLink(destination: AboutView()) {
                     Text("About")
                 }
-
+                
                 Button(action: {
                     guard let url = URL(string: "mailto:interactiveswiftui@gmail.com") else { return }
                     UIApplication.shared.open(url)
                 }) {
                     Text("Email the Dev")
-                        .foregroundColor(Color.black)
                 }
+                .buttonStyle(PlainButtonStyle())
+                
+                Button(action: {
+                    guard let url = URL(string: "https://apps.apple.com/us/developer/harry-cha/id1505570241") else { return }
+                    UIApplication.shared.open(url)
+                }) {
+                    Text("Other SwiftUI Apps")
+                }
+                .buttonStyle(PlainButtonStyle())
             }
             
             Section(header: Text("App")) {
@@ -34,15 +41,15 @@ struct SettingsView: View {
                     UIApplication.shared.open(url)
                 }) {
                     Text("Privacy Policy")
-                        .foregroundColor(Color.black)
                 }
+                .buttonStyle(PlainButtonStyle())
                 
                 Button(action: {
                     self.linkToReview()
                 }) {
                     Text("Rate the App")
-                        .foregroundColor(Color.black)
                 }
+                .buttonStyle(PlainButtonStyle())
                 
                 Text("App Version: \(appVersion!)")
             }
@@ -51,7 +58,7 @@ struct SettingsView: View {
     }
     
     func linkToReview() {
-        guard let productURL = URL(string: "https://apps.apple.com/app/id1505570242") else { return }
+        guard let productURL = URL(string: "https://apps.apple.com/app/id1511793071") else { return }
         
         var components = URLComponents(url: productURL, resolvingAgainstBaseURL: false)
         components?.queryItems = [

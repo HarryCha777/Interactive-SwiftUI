@@ -52,6 +52,12 @@ struct ContentView: View {
                         NavigationLink(destination: SpacerMenuView()) {
                             Text("Spacer")
                         }
+                        NavigationLink(destination: ContainerMenuView()) {
+                            Text("Container")
+                        }
+                        NavigationLink(destination: MenuMenuView()) {
+                            Text("Menu")
+                        }
                     }
                     
                     Section(header: Text("Interaction")) {
@@ -125,7 +131,8 @@ struct ContentView: View {
                 self.checkRatePopUp()
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle()) // needed so the screen works on iPad (not needed?)
+        // Prevents Navigation View from being hidden in the left side on iPads, but disables View Code buttons on iOS 14.
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     func checkRatePopUp() {
@@ -141,7 +148,7 @@ struct ContentView: View {
     }
     
     func linkToReview() {
-        guard let productURL = URL(string: "https://apps.apple.com/app/id1505570242") else { return }
+        guard let productURL = URL(string: "https://apps.apple.com/app/id1511793071") else { return }
         
         var components = URLComponents(url: productURL, resolvingAgainstBaseURL: false)
         components?.queryItems = [

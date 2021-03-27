@@ -10,11 +10,14 @@ import SwiftUI
 
 struct Image1View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     
     var body: some View {
         Group {
-            Image("puppy") // displays a cute image saved as "puppy" in Assets folder
-            // credit: photography on Unsplash by T.R Photography
+            if isReady {
+                Image("puppy") // displays a cute image saved as "puppy" in Assets folder
+                // credit: photography on Unsplash by T.R Photography
+            }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -22,6 +25,9 @@ struct Image1View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

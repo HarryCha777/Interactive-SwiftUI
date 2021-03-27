@@ -10,14 +10,17 @@ import SwiftUI
 
 struct Spacer4View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     
     var body: some View {
         Group {
-            VStack { // groups views vertically
-                Spacer() // puts spacer at top, which takes up all available space
-                Text("This text is a bit above the bottom.") // displays text under top spacer
-                Spacer() // puts spacer at bottom
-                    .frame(minHeight: 20, maxHeight: 50) // resizes spacer to maximum height possible in specified range
+            if isReady {
+                VStack { // groups views vertically
+                    Spacer() // puts spacer at top, which takes up all available space
+                    Text("This text is a bit above the bottom.") // displays text under top spacer
+                    Spacer() // puts spacer at bottom
+                        .frame(minHeight: 20, maxHeight: 50) // resizes spacer to maximum height possible in specified range
+                }
             }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
@@ -26,6 +29,9 @@ struct Spacer4View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

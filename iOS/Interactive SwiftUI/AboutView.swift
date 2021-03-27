@@ -35,14 +35,13 @@ struct AboutView: View {
                     guard let url = URL(string: "mailto:interactiveswiftui@gmail.com") else { return }
                     UIApplication.shared.open(url)
                 }) {
-                    Text("So for any questions or suggestions, please reach out to me at ")
-                        .foregroundColor(Color.black) +
+                    Text("So for any questions or suggestions, please reach out to me at ") +
                         Text("interactiveswiftui@gmail.com")
                             .foregroundColor(Color.blue) +
                         Text(".")
-                            .foregroundColor(Color.black)
                 }
-                
+                .buttonStyle(PlainButtonStyle())
+
                 Text("I truly thank you for your interest and taking your valuable time reading about me and my app!")
             }
         }

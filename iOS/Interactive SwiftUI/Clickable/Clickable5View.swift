@@ -10,18 +10,21 @@ import SwiftUI
 
 struct Clickable5View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var showText = false // makes variable showText as false
 
     var body: some View {
         Group {
-            VStack {
-                Toggle(isOn: $showText) { // displays toggle setting showText
-                    Text("Toggle me on to show text below.") // displays text for toggle
-                }
-                .padding() // puts padding around toggle to ensure it doesn't touch the sides of screen
+            if isReady {
+                VStack {
+                    Toggle(isOn: $showText) { // displays toggle setting showText
+                        Text("Toggle me on to show text below.") // displays text for toggle
+                    }
+                    .padding() // puts padding around toggle to ensure it doesn't touch the sides of screen
                 
-                if showText { // if showText is true
-                    Text("The toggle above is toggled on!") // displays text right under toggle above
+                    if showText { // if showText is true
+                        Text("The toggle above is toggled on!") // displays text right under toggle above
+                    }
                 }
             }
         }
@@ -31,6 +34,9 @@ struct Clickable5View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

@@ -10,13 +10,16 @@ import SwiftUI
 
 struct Stack2View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     
     var body: some View {
         Group {
-            VStack { // groups views vertically
-                Text("This is VStack.") // displays text at top
-                Text("This groups views vertically.") // displays text at middle
-                Text("Just like this.") // displays text at bottom
+            if isReady {
+                VStack { // groups views vertically
+                    Text("This is VStack.") // displays text at top
+                    Text("This groups views vertically.") // displays text at middle
+                    Text("Just like this.") // displays text at bottom
+                }
             }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
@@ -25,6 +28,9 @@ struct Stack2View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

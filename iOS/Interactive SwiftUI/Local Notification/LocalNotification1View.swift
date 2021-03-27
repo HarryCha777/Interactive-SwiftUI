@@ -11,19 +11,22 @@ import UserNotifications // import user notification
 
 struct LocalNotification1View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     
     var body: some View {
         Group {
-            VStack {
-                Button(action: { // if clicked
-                    self.schedule() // calls function named schedule
-                }) {
-                    Text("Click me to show a local notification in 10 seconds!") // displays text
-                    .padding() // puts padding around text to ensure it doesn't touch the sides of screen
-                }
+            if isReady {
+                VStack {
+                    Button(action: { // if clicked
+                        self.schedule() // calls function named schedule
+                    }) {
+                        Text("Click me to show a local notification in 10 seconds!") // displays text
+                        .padding() // puts padding around text to ensure it doesn't touch the sides of screen
+                    }
                 
-                Text("After clicking on the button, please turn off the device's screen for local notification to work properly.") // displays text
-                    .padding() // puts padding around text to ensure it doesn't touch the sides of screen
+                    Text("After clicking on the button, please turn off the device's screen for local notification to work properly.") // displays text
+                        .padding() // puts padding around text to ensure it doesn't touch the sides of screen
+                }
             }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
@@ -32,6 +35,9 @@ struct LocalNotification1View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
     
     func schedule() { // function that asks for notification permission and schedules notification

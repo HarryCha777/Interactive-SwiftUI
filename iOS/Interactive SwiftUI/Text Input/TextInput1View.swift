@@ -10,11 +10,14 @@ import SwiftUI
 
 struct TextInput1View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     @State private var name = "" // makes variable name as blank string
 
     var body: some View {
         Group {
-            TextField("Your Name", text: $name) // displays text field setting name
+            if isReady {
+                TextField("Your Name", text: $name) // displays text field setting name
+            }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -22,6 +25,9 @@ struct TextInput1View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

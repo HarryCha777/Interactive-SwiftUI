@@ -10,14 +10,17 @@ import SwiftUI
 
 struct Spacer3View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     
     var body: some View {
         Group {
-            VStack { // groups views vertically
-                Text("There is a flexible spacer") // displays text at top
-                Spacer() // puts spacer at middle
-                    .frame(minHeight: 50, maxHeight: 100) // resizes spacer to maximum height possible in specified range
-                Text("in-between these two texts.") // displays text at bottom
+            if isReady {
+                VStack { // groups views vertically
+                    Text("There is a flexible spacer") // displays text at top
+                    Spacer() // puts spacer at middle
+                        .frame(minHeight: 50, maxHeight: 100) // resizes spacer to maximum height possible in specified range
+                    Text("in-between these two texts.") // displays text at bottom
+                }
             }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
@@ -26,6 +29,9 @@ struct Spacer3View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

@@ -10,10 +10,13 @@ import SwiftUI
 
 struct Text1View: View {
     @State var title : String
-    
+    @State var isReady = false // needed for View Code to work on iOS 14
+
     var body: some View {
         Group {
-            Text("SwiftUI rocks!") // displays a text
+            if isReady {
+                Text("SwiftUI rocks!") // displays a text
+            }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -21,6 +24,9 @@ struct Text1View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

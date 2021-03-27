@@ -10,12 +10,15 @@ import SwiftUI
 
 struct Image4View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     
     var body: some View {
         Group {
-            Image(systemName: "person.circle.fill") // displays a system icon named "person.circle.fill"
-                .font(.largeTitle) // makes icon larger
-                .foregroundColor(Color.blue) // makes icon blue
+            if isReady {
+                Image(systemName: "person.circle.fill") // displays a system icon named "person.circle.fill"
+                    .font(.largeTitle) // makes icon larger
+                    .foregroundColor(Color.blue) // makes icon blue
+            }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -23,6 +26,9 @@ struct Image4View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 

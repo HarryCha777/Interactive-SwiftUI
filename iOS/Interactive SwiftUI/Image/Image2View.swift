@@ -10,15 +10,18 @@ import SwiftUI
 
 struct Image2View: View {
     @State var title : String
+    @State var isReady = false // needed for View Code to work on iOS 14
     
     var body: some View {
         Group {
-            Image("puppy") // displays a cute image saved as "puppy" in Assets folder
-                .resizable() // makes image fill all available space on screen, which is required before resizing image
-                .frame(width: 350, height: 350) // resizes image to specified width and height
-                .clipShape(Circle()) // clips image with shape circle
-                .overlay(Circle().stroke(Color.white, lineWidth: 5)) // puts white boarder around image
-                .shadow(radius: 10) // displays shadow around image
+            if isReady {
+                Image("puppy") // displays a cute image saved as "puppy" in Assets folder
+                    .resizable() // makes image fill all available space on screen, which is required before resizing image
+                    .frame(width: 350, height: 350) // resizes image to specified width and height
+                    .clipShape(Circle()) // clips image with shape circle
+                    .overlay(Circle().stroke(Color.white, lineWidth: 5)) // puts white boarder around image
+                    .shadow(radius: 10) // displays shadow around image
+            }
         }
         .navigationBarTitle("\(title)", displayMode: .inline)
         .navigationBarItems(trailing:
@@ -26,6 +29,9 @@ struct Image2View: View {
                 Text("View Code")
             }
         )
+        .onAppear {
+            isReady = true
+        }
     }
 }
 
